@@ -16,3 +16,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "gh", "<Nop>", { remap = true })
+map("n", "K", ":m .-2<CR>==", { remap = true, desc = "Move line up (Normal)" })
+map("n", "J", ":m .+1<CR>==", { remap = true, desc = "Move line down (Normal)" })
+map("v", "K", ":m '<-2<CR>gv=gv", { remap = true, desc = "Move lines up (Visual)" })
+map("v", "J", ":m '>+1<CR>gv=gv", { remap = true, desc = "Move lines down (Visual)" })
