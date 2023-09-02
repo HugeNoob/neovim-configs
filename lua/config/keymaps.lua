@@ -15,4 +15,5 @@ local function map(mode, lhs, rhs, opts)
     end
 end
 
-map("n", "gh", "<Nop>", { remap = true })
+map("n", "gh", "<Nop>", { remap = true, desc = "Hover" })
+map("v", "<leader>p", "\"_dP", { remap = true, desc = "Register paste" })
