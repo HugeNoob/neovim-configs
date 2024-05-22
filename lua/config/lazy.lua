@@ -24,6 +24,8 @@ require("lazy").setup({
         { import = "plugins" },
 
         -- disable some unwanted defaults
+        { "folke/todo-comments.nvim", enabled = false },
+        { "catppuccin/nvim", name = "catppuccin", enabled = false },
         { "catppuccin/nvim", name = "catppuccin", enabled = false },
         { "folke/tokyonight.nvim", enabled = false },
         { "folke/flash.nvim", enabled = false },
@@ -37,7 +39,10 @@ require("lazy").setup({
         version = false, -- always use the latest git commit
         -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
-    checker = { enabled = true }, -- automatically check for plugin updates
+    checker = {
+        enabled = true,
+        notify = false,
+    }, -- automatically check for plugin updates
     performance = {
         rtp = {
             -- disable some rtp plugins
